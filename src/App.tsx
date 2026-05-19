@@ -17,13 +17,13 @@ import {
 // --- Constants & Assets ---
 const BRAND_AMBER = "#D99532";
 const IMAGES = {
-  hero: "input_file_4.png", // Molten gold pouring with bars
-  refining: "input_file_3.png", // Molten gold pouring
-  pure_gold: "input_file_5.png", // Gold bar purity
-  worker: "input_file_0.png", // Worker smelting gold
-  protection: "input_file_2.png", // Heat resistant suit
-  nuggets: "input_file_1.png", // Gold nuggets
-  visit: "input_file_6.png" // Institutional visit
+  hero: "https://lh3.googleusercontent.com/u/0/d/1PxQYRbg63J9_4-Cwi_8r8CvDStvMizhI",
+  refining: "https://lh3.googleusercontent.com/u/0/d/1AIJT-3lFF7bfl1w09qReQGJAgHxfqOhc",
+  pure_gold: "https://lh3.googleusercontent.com/u/0/d/14HzTsRCNYu6_ky40KAK8TAul4zPEyWtf",
+  worker: "https://lh3.googleusercontent.com/u/0/d/1Rr0W46BkC5OV-ySCal7JWBqxTnRqhyLn",
+  protection: "https://lh3.googleusercontent.com/u/0/d/1UC_2CtyV_Pmthpk4a7SMjBVSDd4TXcEg",
+  nuggets: "https://lh3.googleusercontent.com/u/0/d/1XuA6tjsTpvJoB1bK6PT-tWAl2kxrAX1U",
+  visit: "https://lh3.googleusercontent.com/u/0/d/1hFgYED-WLsE1P0gkJbawjb1NjitaD8iO"
 };
 
 // --- Components ---
@@ -242,19 +242,26 @@ const Vision = () => (
           subtitle="Under the leadership of Executive Director Mr. Benard Mungu Feni, we are transitioning from a localized operation into a key institutional partner for sovereign entities."
         />
         <div className="space-y-8">
-              <div className="border-l-2 border-brand-amber pl-6">
-                <h4 className="font-mono text-[10px] font-bold uppercase tracking-widest text-zinc-400 mb-2">Refinery Visit</h4>
-                <div className="aspect-video w-full rounded overflow-hidden mb-4">
-                  <img src={IMAGES.visit} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
-                </div>
-                <p className="text-lg font-sans leading-relaxed text-brand-base italic">
-                  "To become the largest, most trusted direct supplier of ethically sourced and processed precious minerals (gold and diamonds) to the global market."
-                </p>
+          <div className="border-l-2 border-brand-amber pl-6">
+            <h4 className="font-mono text-[10px] font-bold uppercase tracking-widest text-zinc-400 mb-2">Leadership</h4>
+            <div className="flex items-center gap-4 mb-4">
+              <div className="w-12 h-12 rounded-full bg-zinc-100 flex items-center justify-center font-bold text-zinc-400">BF</div>
+              <div>
+                <p className="font-bold text-sm">Mr. Benard Mungu Feni</p>
+                <p className="text-[10px] text-zinc-500 uppercase tracking-widest">Executive Director</p>
               </div>
+            </div>
+            <p className="text-lg font-sans leading-relaxed text-brand-base italic">
+              "To become the largest, most trusted direct supplier of ethically sourced and processed precious minerals (gold and diamonds) to the global market."
+            </p>
+          </div>
           <div className="border-l-2 border-zinc-200 pl-6">
-            <h4 className="font-mono text-[10px] font-bold uppercase tracking-widest text-zinc-400 mb-2">Our Mission</h4>
+            <h4 className="font-mono text-[10px] font-bold uppercase tracking-widest text-zinc-400 mb-2">Institutional Visit</h4>
+            <div className="aspect-video w-full rounded overflow-hidden mb-4 grayscale hover:grayscale-0 transition-all duration-700 cursor-pointer border border-zinc-100">
+               <img src={IMAGES.visit} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+            </div>
             <p className="text-base font-sans leading-relaxed text-zinc-600">
-              To deliver world-class refining and assaying services utilizing eco-friendly, energy-efficient, and sustainable tech frameworks, while empowering local mining communities.
+              Working in lockstep with the MEMD and the Bank of Uganda to formalize the sector and build national reserves.
             </p>
           </div>
         </div>
@@ -277,7 +284,7 @@ const Vision = () => (
   </section>
 );
 
-const MachineCatalog = () => (
+const TechnicalServices = () => (
   <section className="bg-brand-base text-white py-32 overflow-hidden">
     <div className="max-w-7xl mx-auto px-6">
       <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
@@ -313,25 +320,34 @@ const MachineCatalog = () => (
           </div>
         </div>
 
-        <div className="lg:col-span-4 space-y-4">
-          {[
-            { cat: 'Fire Assaying', sub: 'Traditional Metallurgical Testing', count: 'XRF' },
-            { cat: 'Spectrometry', sub: 'Ray Fluorescence Composition', active: true },
-            { cat: 'Gold Smelting', sub: 'Custom Casting & Conversion', count: '1kg+' },
-            { cat: 'Gemstone Certification', sub: 'Diamond Testing & Evaluation', count: 'PRO' },
-            { cat: 'Trade Logistics', sub: 'Secure Vaulting & Transport', count: 'SEC' },
-            { cat: 'Mineral Consultancy', sub: 'Strategic Joint Venture Structuring', count: 'HQ' },
-          ].map((item, i) => (
-            <div key={i} className={`p-6 border-b border-white/10 flex justify-between items-center cursor-pointer transition-all hover:bg-white/5 ${item.active ? 'bg-brand-amber text-brand-base rounded' : ''}`}>
-              <div>
-                <h4 className="font-bold text-sm">{item.cat}</h4>
-                <p className={`text-[10px] uppercase tracking-widest ${item.active ? 'text-brand-base' : 'text-zinc-500'}`}>{item.sub}</p>
-              </div>
-              <div className={`w-10 h-6 px-2 rounded-full border text-[9px] flex items-center justify-center font-bold ${item.active ? 'border-brand-base' : 'border-zinc-700'}`}>
-                {item.count || 'ACT'}
-              </div>
+        <div className="lg:col-span-4 flex flex-col gap-4">
+           <div className="relative group flex-1 rounded overflow-hidden border border-white/10">
+            <img src={IMAGES.protection} className="w-full h-full object-cover opacity-50 group-hover:opacity-80 transition-opacity" referrerPolicy="no-referrer" />
+            <div className="absolute inset-0 p-6 flex flex-col justify-end bg-gradient-to-t from-black/80 to-transparent">
+               <h4 className="font-bold text-lg mb-1 tracking-tight">Advanced Safety</h4>
+               <p className="text-[10px] text-zinc-400 font-mono uppercase tracking-widest">Closed-loop systems to eliminate harmful runoff.</p>
             </div>
-          ))}
+          </div>
+          <div className="space-y-4">
+            {[
+              { cat: 'Fire Assaying', sub: 'Traditional Metallurgical Testing', count: 'XRF' },
+              { cat: 'Spectrometry', sub: 'Ray Fluorescence Composition', active: true },
+              { cat: 'Gold Smelting', sub: 'Custom Casting & Conversion', count: '1kg+' },
+              { cat: 'Gemstone Certification', sub: 'Diamond Testing & Evaluation', count: 'PRO' },
+              { cat: 'Trade Logistics', sub: 'Secure Vaulting & Transport', count: 'SEC' },
+              { cat: 'Mineral Consultancy', sub: 'Strategic Joint Venture Structuring', count: 'HQ' },
+            ].map((item, i) => (
+              <div key={i} className={`p-4 border-b border-white/10 flex justify-between items-center cursor-pointer transition-all hover:bg-white/5 ${item.active ? 'bg-brand-amber text-brand-base rounded' : ''}`}>
+                <div>
+                  <h4 className="font-bold text-xs uppercase tracking-tight">{item.cat}</h4>
+                  <p className={`text-[9px] uppercase tracking-widest ${item.active ? 'text-brand-base' : 'text-zinc-500'}`}>{item.sub}</p>
+                </div>
+                <div className={`w-10 h-6 px-2 rounded-full border text-[9px] flex items-center justify-center font-bold ${item.active ? 'border-brand-base' : 'border-zinc-700'}`}>
+                  {item.count || 'ACT'}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
@@ -520,7 +536,7 @@ export default function App() {
       <main className="flex-1">
         <Hero />
         <Vision />
-        <MachineCatalog />
+        <TechnicalServices />
         <OperationsMap />
         <SustainabilityLedger />
         
