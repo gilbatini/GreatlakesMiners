@@ -203,20 +203,18 @@ const Hero = () => {
       {/* Featured Machine Row */}
       <div className="max-w-7xl mx-auto px-6 w-full grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 border-t border-brand-border/10">
         {[
-          { label: 'The Aurum', price: 'Pure Gold 24K', active: true, isCTA: false },
-          { label: 'Kilo-Moto Unit', price: 'Deep Core', active: false, isCTA: false },
-          { label: 'Busia Shaft', price: 'High Yield', active: false, isCTA: false },
-          { label: 'Lode Master', price: 'Scanning', active: false, isCTA: false },
-          { label: 'Check assets', price: 'View all (128)', active: false, isCTA: true },
-          { label: 'Check assets', price: 'View all (128)', active: false, isCTA: true },
+          { label: 'The Aurum', price: 'Pure Gold 24K', active: true, isCTA: false, image: IMAGES.pure_gold },
+          { label: 'Kilo-Moto Unit', price: 'Deep Core', active: false, isCTA: false, image: IMAGES.refining },
+          { label: 'Busia Shaft', price: 'High Yield', active: false, isCTA: false, image: IMAGES.nuggets },
+          { label: 'Lode Master', price: 'Scanning', active: false, isCTA: false, image: IMAGES.worker },
+          { label: 'Check assets', price: 'View all (128)', active: false, isCTA: true, image: IMAGES.protection },
+          { label: 'Check assets', price: 'View all (128)', active: false, isCTA: true, image: IMAGES.hero },
         ].map((item, i) => (
           <div key={i} className={`p-6 border-r border-brand-border/10 flex flex-col justify-end min-h-[220px] transition-all relative overflow-hidden group cursor-pointer 
             ${item.active ? 'bg-brand-amber text-brand-base' : 'bg-white hover:bg-zinc-50'}
             ${i === 5 ? 'bg-black text-white' : ''}
           `}>
-            {item.active && (
-              <img src={IMAGES.nuggets} className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700" referrerPolicy="no-referrer" />
-            )}
+            <img src={item.image} className={`absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ${item.active ? 'opacity-60' : 'opacity-0 group-hover:opacity-20'}`} referrerPolicy="no-referrer" />
             <div className="relative z-10">
               <h3 className="font-bold text-sm tracking-tight mb-1">{item.label}</h3>
               <p className={`text-[10px] font-mono uppercase tracking-widest ${item.active ? 'text-brand-base' : 'text-zinc-400'}`}>{item.price}</p>
