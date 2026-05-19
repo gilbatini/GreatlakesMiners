@@ -24,7 +24,8 @@ const IMAGES = {
   protection: "https://lh3.googleusercontent.com/u/0/d/1UC_2CtyV_Pmthpk4a7SMjBVSDd4TXcEg",
   nuggets: "https://lh3.googleusercontent.com/u/0/d/1XuA6tjsTpvJoB1bK6PT-tWAl2kxrAX1U",
   visit: "https://lh3.googleusercontent.com/u/0/d/1hFgYED-WLsE1P0gkJbawjb1NjitaD8iO",
-  licensing_bg: "https://lh3.googleusercontent.com/u/0/d/1mksjigTjSnu6SZOw6vmL8hH72ORkCqAR"
+  licensing_bg: "https://lh3.googleusercontent.com/u/0/d/1mksjigTjSnu6SZOw6vmL8hH72ORkCqAR",
+  logo: "https://lh3.googleusercontent.com/u/0/d/1kEvnOt8R7ZEQmYQqlTQ1dBWHxTfuUcrl"
 };
 
 // --- Components ---
@@ -85,11 +86,10 @@ const Navbar = () => {
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-sm py-4' : 'bg-transparent py-6'}`}>
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         <div className="flex items-center gap-8">
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-brand-base flex items-center justify-center -skew-x-12">
-              <span className="text-white font-bold text-lg select-none">G</span>
+          <div className="flex items-center gap-3">
+            <div className="h-12">
+              <img src={IMAGES.logo} alt="Great Lakes Miners" className="h-full w-auto object-contain" referrerPolicy="no-referrer" />
             </div>
-            <span className="font-bold tracking-tighter text-xl">GREAT_LAKES_MINERS</span>
           </div>
           
           <nav className="hidden lg:flex items-center gap-8 text-[11px] font-mono font-bold tracking-widest text-brand-base/60">
@@ -475,11 +475,10 @@ const Footer = () => (
     <div className="max-w-7xl mx-auto px-6">
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-12 mb-24">
         <div className="lg:col-span-2 space-y-6">
-          <div className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-brand-amber flex items-center justify-center -skew-x-12">
-              <span className="text-brand-base font-bold text-xl">G</span>
+          <div className="flex items-center gap-3">
+            <div className="h-16">
+              <img src={IMAGES.logo} alt="Great Lakes Miners" className="h-full w-auto object-contain brightness-0 invert" referrerPolicy="no-referrer" />
             </div>
-            <span className="font-bold tracking-tighter text-3xl">GREAT_LAKES_MINERS</span>
           </div>
           <p className="text-zinc-500 max-w-sm text-sm">
             Bridging the gap between tectonic potential and precious metal supply. Based in Uganda and the Congo, GLM is the heart of African gold innovation.
@@ -533,17 +532,17 @@ const Footer = () => (
         rel="noopener noreferrer"
         initial={{ opacity: 0, scale: 0.8, y: 50 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
-        whileHover={{ scale: 1.1, y: -5 }}
+        whileHover={{ scale: 1.05, y: -2 }}
         whileTap={{ scale: 0.95 }}
-        className="fixed bottom-8 right-8 z-50 flex items-center justify-center group"
+        className="fixed bottom-6 right-6 z-50 flex items-center justify-center group"
       >
-        <div className="absolute -inset-2 bg-brand-amber rounded-full opacity-10 animate-ping group-hover:opacity-30 pointer-events-none"></div>
-        <div className="relative bg-black text-white px-6 py-4 rounded-full flex items-center gap-3 shadow-[0_0_40px_rgba(0,0,0,0.5)] border border-white/10 overflow-hidden">
+        <div className="absolute -inset-2 bg-brand-amber rounded-full opacity-5 animate-ping group-hover:opacity-20 pointer-events-none"></div>
+        <div className="relative bg-black text-white px-4 py-2.5 rounded-full flex items-center gap-3 shadow-[0_0_30px_rgba(0,0,0,0.3)] border border-white/10 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
-          <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse shadow-[0_0_10px_rgba(16,185,129,0.8)]"></div>
-          <span className="font-mono text-[10px] font-bold tracking-[0.2em] uppercase">WhatsApp Direct</span>
-          <div className="w-8 h-8 flex items-center justify-center rounded-full bg-white/10 group-hover:bg-brand-amber group-hover:text-black transition-colors">
-            <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+          <div className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse shadow-[0_0_8px_rgba(16,185,129,0.8)]"></div>
+          <span className="font-mono text-[9px] font-bold tracking-[0.1em] uppercase">WhatsApp</span>
+          <div className="w-6 h-6 flex items-center justify-center rounded-full bg-white/10 group-hover:bg-brand-amber group-hover:text-black transition-colors">
+            <svg className="w-3 h-3 fill-current" viewBox="0 0 24 24">
               <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.025 3.334l-.654 2.378 2.456-.644c.991.542 1.948.932 2.941.932 3.181 0 5.765-2.586 5.766-5.766 0-3.18-2.585-5.766-5.766-5.766zm3.326 8.041c-.135.385-.689.702-1.012.748-.28.041-.635.068-1.028-.063-.245-.083-.559-.191-.937-.354-1.605-.694-2.651-2.336-2.73-2.443-.081-.107-.655-.873-.655-1.666 0-.793.407-1.182.569-1.353.161-.17.352-.213.469-.213.118 0 .235.002.338.006.111.004.261-.042.408.312.152.366.521 1.272.567 1.363.045.09.076.196.015.318-.06.121-.09.196-.182.302-.091.106-.192.231-.274.312-.091.09-.186.189-.08.371.106.182.472.782.997 1.25.68.607 1.246.793 1.428.883.181.091.288.076.394-.045.106-.121.455-.53.576-.713.121-.182.242-.152.408-.091.167.061 1.061.5 1.242.591.181.091.303.136.347.213.046.075.046.438-.088.823z" />
               <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 2c5.522 0 10 4.477 10 10s-4.478 10-10 10-10-4.478-10-10 4.478-10 10-10z" />
             </svg>
