@@ -23,7 +23,8 @@ const IMAGES = {
   worker: "https://lh3.googleusercontent.com/u/0/d/1Rr0W46BkC5OV-ySCal7JWBqxTnRqhyLn",
   protection: "https://lh3.googleusercontent.com/u/0/d/1UC_2CtyV_Pmthpk4a7SMjBVSDd4TXcEg",
   nuggets: "https://lh3.googleusercontent.com/u/0/d/1XuA6tjsTpvJoB1bK6PT-tWAl2kxrAX1U",
-  visit: "https://lh3.googleusercontent.com/u/0/d/1hFgYED-WLsE1P0gkJbawjb1NjitaD8iO"
+  visit: "https://lh3.googleusercontent.com/u/0/d/1hFgYED-WLsE1P0gkJbawjb1NjitaD8iO",
+  licensing_bg: "https://lh3.googleusercontent.com/u/0/d/1mksjigTjSnu6SZOw6vmL8hH72ORkCqAR"
 };
 
 // --- Components ---
@@ -354,12 +355,15 @@ const TechnicalServices = () => (
 
 const OperationsMap = () => (
   <section className="bg-brand-base py-32 border-t border-white/5 relative overflow-hidden">
-    {/* Abstract Map Background */}
-    <div className="absolute inset-0 opacity-20 pointer-events-none">
-      <div className="w-full h-full" style={{ 
-        backgroundImage: 'radial-gradient(circle at 10% 20%, white 1px, transparent 1px)', 
-        backgroundSize: '30px 30px' 
-      }}></div>
+    {/* Map Background Image */}
+    <div className="absolute inset-0 opacity-40 pointer-events-none">
+      <img 
+        src={IMAGES.licensing_bg} 
+        className="w-full h-full object-cover grayscale" 
+        referrerPolicy="no-referrer"
+        alt="Operations licensing background"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-brand-base via-transparent to-brand-base"></div>
     </div>
 
     <div className="max-w-7xl mx-auto px-6 relative z-10 flex flex-col items-center">
