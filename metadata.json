@@ -1,0 +1,10 @@
+{
+  "name": "Great Lakes Miners",
+  "description": "Leading the future of resource extraction in Uganda and the Congo through innovation, precision, and sustainable industrial intelligence.",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
