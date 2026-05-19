@@ -25,7 +25,8 @@ const IMAGES = {
   nuggets: "https://lh3.googleusercontent.com/u/0/d/1XuA6tjsTpvJoB1bK6PT-tWAl2kxrAX1U",
   visit: "https://lh3.googleusercontent.com/u/0/d/1hFgYED-WLsE1P0gkJbawjb1NjitaD8iO",
   licensing_bg: "https://lh3.googleusercontent.com/u/0/d/1mksjigTjSnu6SZOw6vmL8hH72ORkCqAR",
-  logo: "https://lh3.googleusercontent.com/u/0/d/1kEvnOt8R7ZEQmYQqlTQ1dBWHxTfuUcrl"
+  logo: "https://lh3.googleusercontent.com/u/0/d/1kEvnOt8R7ZEQmYQqlTQ1dBWHxTfuUcrl",
+  footer_logo: "https://lh3.googleusercontent.com/u/0/d/177c12Cod9DhsZERiXTvP_ewQoaDXbrqd"
 };
 
 // --- Components ---
@@ -476,8 +477,8 @@ const Footer = () => (
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-12 mb-24">
         <div className="lg:col-span-2 space-y-6">
           <div className="flex items-center gap-3">
-            <div className="h-16">
-              <img src={IMAGES.logo} alt="Great Lakes Miners" className="h-full w-auto object-contain brightness-0 invert" referrerPolicy="no-referrer" />
+            <div className="h-12">
+              <img src={IMAGES.footer_logo} alt="Great Lakes Miners" className="h-full w-auto object-contain brightness-0 invert" referrerPolicy="no-referrer" />
             </div>
           </div>
           <p className="text-zinc-500 max-w-sm text-sm">
