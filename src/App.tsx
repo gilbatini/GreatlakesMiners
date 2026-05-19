@@ -509,7 +509,7 @@ const Footer = () => (
               <p>Plot 1, Katego Road, Kamwokya<br />Kampala, Uganda</p>
               <p>West Burry Tower, Business Bay<br />Dubai, UAE</p>
               <p className="text-brand-amber font-bold">info@greatlakesminers.com</p>
-              <p>+256 414 552 100</p>
+              <p>+256 756 100112</p>
             </div>
           </div>
         </div>
@@ -525,6 +525,31 @@ const Footer = () => (
           <a href="#" className="hover:text-white transition-colors">Terminal</a>
         </div>
       </div>
+
+      {/* Floating WhatsApp Action - Black Interactive */}
+      <motion.a
+        href="https://wa.me/256756100112"
+        target="_blank"
+        rel="noopener noreferrer"
+        initial={{ opacity: 0, scale: 0.8, y: 50 }}
+        animate={{ opacity: 1, scale: 1, y: 0 }}
+        whileHover={{ scale: 1.1, y: -5 }}
+        whileTap={{ scale: 0.95 }}
+        className="fixed bottom-8 right-8 z-50 flex items-center justify-center group"
+      >
+        <div className="absolute -inset-2 bg-brand-amber rounded-full opacity-10 animate-ping group-hover:opacity-30 pointer-events-none"></div>
+        <div className="relative bg-black text-white px-6 py-4 rounded-full flex items-center gap-3 shadow-[0_0_40px_rgba(0,0,0,0.5)] border border-white/10 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+          <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse shadow-[0_0_10px_rgba(16,185,129,0.8)]"></div>
+          <span className="font-mono text-[10px] font-bold tracking-[0.2em] uppercase">WhatsApp Direct</span>
+          <div className="w-8 h-8 flex items-center justify-center rounded-full bg-white/10 group-hover:bg-brand-amber group-hover:text-black transition-colors">
+            <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.025 3.334l-.654 2.378 2.456-.644c.991.542 1.948.932 2.941.932 3.181 0 5.765-2.586 5.766-5.766 0-3.18-2.585-5.766-5.766-5.766zm3.326 8.041c-.135.385-.689.702-1.012.748-.28.041-.635.068-1.028-.063-.245-.083-.559-.191-.937-.354-1.605-.694-2.651-2.336-2.73-2.443-.081-.107-.655-.873-.655-1.666 0-.793.407-1.182.569-1.353.161-.17.352-.213.469-.213.118 0 .235.002.338.006.111.004.261-.042.408.312.152.366.521 1.272.567 1.363.045.09.076.196.015.318-.06.121-.09.196-.182.302-.091.106-.192.231-.274.312-.091.09-.186.189-.08.371.106.182.472.782.997 1.25.68.607 1.246.793 1.428.883.181.091.288.076.394-.045.106-.121.455-.53.576-.713.121-.182.242-.152.408-.091.167.061 1.061.5 1.242.591.181.091.303.136.347.213.046.075.046.438-.088.823z" />
+              <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 2c5.522 0 10 4.477 10 10s-4.478 10-10 10-10-4.478-10-10 4.478-10 10-10z" />
+            </svg>
+          </div>
+        </div>
+      </motion.a>
     </div>
   </footer>
 );
